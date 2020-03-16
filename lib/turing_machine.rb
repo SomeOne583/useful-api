@@ -1,8 +1,9 @@
 class TuringMachine
-    def initialize
+    def initialize(instrucciones)
         @tape = [0]
         @position = 0
         @ouputs = []
+        execute(instrucciones)
     end
 
     def execute(instrucciones)
