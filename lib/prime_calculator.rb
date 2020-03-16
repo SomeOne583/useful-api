@@ -1,14 +1,13 @@
 class PrimeCalculator
     def initialize(amount)
-        @primes = []
+        @primes = [2]
         find_primes(amount)
     end
 
     def find_primes(amount)
         n = 1
         while @primes.size < amount
-            n += 1
-            next if (n % 2 == 0 && n != 2)
+            n += 2
             @primes << n if check_prime(n)
         end
         print @primes
